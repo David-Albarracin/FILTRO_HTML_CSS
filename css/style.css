@@ -1,0 +1,299 @@
+/* ====================== BASE ====================== */
+
+:root{
+
+    /* HEADER */
+    --header-height: 1rem;
+  
+    /*========== Colors ==========*/
+     --first-color: #F85B1A;
+     --second-color: #a60074;
+     --button-color: #3483fa;
+     --button-color-alt: #0056b3;
+     --title-color: hsl(0, 0%, 15%);
+     --text-color: hsl(0, 0%, 35%);
+     --text-color-light: hsl(0, 0%, 55%);
+     --body-color:  #e7e7e7;
+     --container-color: #fff;
+     --border-color: hsl(0, 0%, 88%);
+     --shop-color: hsl(0, 0%, 92%);
+     --discount-color: #00a650;
+     --background-show: rgba(24, 24, 24, 0.929);
+
+    /*========== FONT ==========*/
+     --body-font: 'Roboto', sans-serif;
+
+     --biggest-font-size: 2rem;
+     --h1-font-size: 1.5rem;
+     --h2-font-size: 1.25rem;
+     --h3-font-size: 1rem;
+     --normal-font-size: .938rem;
+     --small-font-size: .813rem;
+     --smaller-font-size: .75rem;
+
+    @media screen and (min-width: 968px){
+        /* HEADER */
+        --header-height: 2rem;
+
+        /*========== FONT ==========*/
+         --biggest-font-size: 2.5rem;
+         --h1-font-size: 2.25rem;
+         --h2-font-size: 1.5rem;
+         --h3-font-size: 1.25rem;
+         --normal-font-size: 1rem;
+         --small-font-size: .875rem;
+         --smaller-font-size: .813rem;
+
+    }
+
+}
+ 
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body,
+button,
+input{
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+}
+
+
+body{
+    margin: 0;
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+h1,h2,h3,h4{
+    color: var(--title-color);
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: var(--title-color);
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+h1{
+    font-size: var(--h1-font-size);
+}
+
+h2{
+    font-size: var(--h2-font-size);
+}
+
+h3{
+    font-size: var(--h3-font-size);
+}
+
+h4{
+    font-weight: var(--font-medium);  
+}
+
+
+/* ====================== LAYOUT ====================== */
+
+.d-flex{
+    display: flex;
+}
+
+.d-grid{
+    display: grid;
+}
+
+.gap-1{
+    gap: 0.5rem;
+}
+
+.text-align-center{
+    text-align: center;
+}
+
+.order-1{
+    order: 1;
+}
+
+.mb-3{
+    margin-bottom: 3rem;
+}
+
+.mt-1{
+    margin-top: 0.5rem;
+}
+
+
+.mx-1{
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.my-1{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.me-1{
+    margin-right: 0.5rem;
+}
+
+.container{
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.main{
+    padding: var(--header-height);
+}
+
+
+.mat-fab{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    background: none;
+}
+
+.align-items-center{
+    align-items: center;
+}
+
+
+/*========== CAMPUS SHOP ==========*/
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.products{
+    border-radius: 20px;
+    border: 2px solid var(--border-color);
+    width: 100%;
+    height: 90vh;
+    padding: 1rem;
+    background-color: var(--container-color);
+    overflow-y: scroll;
+}
+
+.products__content{
+    padding-top: 1rem;
+}
+
+.side-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.side-menu__link {
+    padding: 1rem;
+    margin: 0.5rem 0px;
+    border: 2px solid var(--border-color);
+}
+
+.side__button {
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--container-color);
+}
+
+.product{
+    text-align: center;
+    border-radius: 20px;
+    border: 2px solid var(--border-color);
+}
+
+
+.product__img img{
+    padding: 0.5rem;
+}
+
+.product__content {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border: 2px solid;
+    border-radius: 20px;
+    text-align: start;
+}
+
+.add-cart {
+    padding: 5px 20px;
+    border-radius: 10px;
+    background-color: var(--discount-color);
+    color: var(--container-color);
+}
+
+.link-active{
+    background-color: var(--container-color);
+}
+
+
+/*========== Large (lg) ==========*/
+@media (min-width: 992px) {
+
+    .products__content{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+
+    .shop{
+        grid-template-columns: 25% 75%;
+    }
+
+    .product__img img{
+        max-height: 350px;
+    }
+
+
+
+}
+
+/*========== Extra extra large (xxl) ==========*/
+@media (min-width: 1400px) {
+    .products__content{
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+
+
+    .shop{
+        grid-template-columns: 20% 80%;
+    }
+}
