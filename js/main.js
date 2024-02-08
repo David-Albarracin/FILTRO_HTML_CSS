@@ -106,6 +106,7 @@ function hrefBack(){
 
 function filter(categoryS){
     //Agregar el Estilo  a la etiqueta a de activado
+    productsContainer.classList.add("d-grid")
     aCategory.classList.remove("link-active")
     aCategory = document.getElementById(categoryS)
     aCategory.classList.add("link-active")
@@ -133,20 +134,49 @@ function filter(categoryS){
 
 function loadCart(){
     //Agregar el Estilo  a la etiqueta a de activado
+    productsContainer.classList.add("d-grid")
     aCategory.classList.remove("link-active")
 
     //Reiniciar los Elementos dentro de los Contenedores
     productContainer.innerHTML = ``
     productsContainer.innerHTML = ``
+    productsContainer.classList.remove("d-grid")
 
     category.textContent = "Carrito"
     if (cart.length == 0) {
         productsContainer.innerHTML += `
             <div class="my-1"><h2>Tu Carrito esta Vació :c</h2></div>
-        
         `
     }else{
-        loadProducts(cart)
+        cart.forEach(product => {
+            productsContainer.innerHTML +=  `
+                <div class="cart__product">
+                    <img src="${product.img}" alt="alt">
+                    <div>
+                        <h3>Nombre</h3>
+                        <span>${product.title}</span>
+                    </div>
+                    <div class="d-grid gap-1">
+                        <label for="amount">Cantidad</label>
+                        <input type="text" name="amount" id="" value="1">
+                    </div>
+                    <div>
+                        <h3>Precio</h3>
+                        <h4>$<span>${product.amount}</span></h4>  
+                    </div>
+                    <div>
+                        <h3>Subtotal</h3>
+                        <h4>$<span>${product.amount}</span></h4>
+                    </div>
+                    <div class="text-align-center">
+                        <h2>
+                            <i class='bx bxs-trash'></i>
+                        </h2>
+                    </div>
+                </div>
+            `
+        })
+
     }
 
 
