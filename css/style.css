@@ -18,7 +18,7 @@
      --border-color: hsl(0, 0%, 88%);
      --shop-color: hsl(0, 0%, 92%);
      --discount-color: #00a650;
-     --background-show: rgba(24, 24, 24, 0.929);
+     --background-show: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 
     /*========== FONT ==========*/
      --body-font: 'Roboto', sans-serif;
@@ -194,6 +194,12 @@ h4{
     padding: 1rem;
     margin: 0.5rem 0px;
     border: 2px solid var(--border-color);
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+.side-menu__link:hover{
+    background-color: var(--container-color);
 }
 
 .side__button {
@@ -212,6 +218,14 @@ h4{
     text-align: center;
     border-radius: 20px;
     border: 2px solid var(--border-color);
+    transition: all 0.8s;
+    -webkit-transition: all 0.8s;
+
+}
+
+.product:hover{
+    transform: scale(1.05);
+    box-shadow: var(--background-show);
 }
 
 
@@ -235,6 +249,13 @@ h4{
     border-radius: 10px;
     background-color: var(--discount-color);
     color: var(--container-color);
+    transition: all 1s;
+    -webkit-transition: all 1s;
+}
+
+.add-cart:hover{
+    transform: scale(1.01);
+    box-shadow: var(--background-show);
 }
 
 .link-active{
@@ -275,8 +296,14 @@ h4{
     align-items: center;
     overflow-x: scroll;
     text-align: center;
+    transition: all 1s;
+    -webkit-transition: all 1s;
 }
 
+.cart__product:hover{
+    transform: scale(1.05);
+    box-shadow: var(--background-show);
+}
 
 
 .cart__product input{
@@ -338,4 +365,20 @@ h4{
     .shop{
         grid-template-columns: 20% 80%;
     }
+}
+
+
+.sidebar__title{
+    animation: moveTitle;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes moveTitle{
+    0%{}
+    50%{
+        color: var(--first-color);
+        transform: scale(1.06);
+    }
+
 }
