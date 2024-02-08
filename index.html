@@ -16,25 +16,25 @@
                     <h1>CampusShop</h1>
                 </a>
                 <nav class="side-menu">
-                    <a class="side-menu__link link-active">
+                    <a id="all" onclick="filter('all')" class="side-menu__link link-active">
                         <i class='bx bx-category'></i>
                         <span>Todos los Productos</span>
                     </a>
-                    <a class="side-menu__link">
+                    <a id="abrigos" onclick="filter('abrigos')"  class="side-menu__link">
                         <i class='bx bxs-t-shirt'></i>
                         <span>Abrigos</span>
                     </a>
-                    <a class="side-menu__link">
+                    <a id="camisas" onclick="filter('camisas')" class="side-menu__link">
                         <i class='bx bxs-t-shirt'></i>
                         <span>Camisas</span>
                     </a>
-                    <a class="side-menu__link">
+                    <a id="pantalones" onclick="filter('pantalones')" class="side-menu__link">
                         <i class='bx bx-body'></i>
                         <span>Pantalones</span>
                     </a>
                 </nav>
                 <div class="my-1">
-                    <button class="side__button">
+                    <button onclick="loadCart()" class="side__button">
                         <div>
                             <i class='bx bxs-cart' ></i>
                             <span>Carrito</span>
@@ -51,13 +51,18 @@
             <!-- PRODUCTS -->
             <div class="products">
                 <h1 id="category">
-                    Todos los Productos
                 </h1>
+
+                <div class="cart__product">
+                    
+                </div>
+
                 <div id="product" class="d-grid">
-                    div
                 </div>
                 <div id="products" class="d-grid products__content">
                 </div>
+
+
             </div>
 
             <!-- PRODUCTS -->

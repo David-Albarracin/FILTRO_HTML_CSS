@@ -233,6 +233,10 @@ h4{
 }
 
 .product{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
     text-align: center;
     border-radius: 20px;
     border: 2px solid var(--border-color);
@@ -246,6 +250,8 @@ h4{
 .product__content {
     display: flex;
     justify-content: space-between;
+    position: relative;
+    bottom: 0;
     padding: 1rem;
     border: 2px solid;
     border-radius: 20px;
@@ -262,6 +268,26 @@ h4{
 .link-active{
     background-color: var(--container-color);
 }
+
+/*========== DIALOG ==========*/
+.dialog{
+    padding: 1rem;
+}
+
+.dialog__images{
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+.dialog__image{
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+
+#category{
+    text-transform: capitalize;
+}
+
 
 
 /*========== Large (lg) ==========*/
